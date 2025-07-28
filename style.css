@@ -1,0 +1,142 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: black;
+  color: white;
+  height: 100%;
+}
+
+.gallery-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 1;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-button.left {
+  left: 1rem;
+}
+
+.nav-button.right {
+  right: 1rem;
+}
+
+.thumbnails {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  z-index: 2;
+  overflow: auto;
+}
+.thumbnails img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.thumbnails img.selected {
+  border-color: #5a2c83;
+}
+.thumbnails img:hover {
+  border-color: #006939;
+}
+
+@media (min-width: 1280px) {
+  .title-overlay {
+    font-size: 3rem;
+  }
+
+  .nav-button {
+    font-size: 4rem;
+  }
+
+  .thumbnails img {
+    width: 100px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-overlay {
+    font-size: 2rem;
+  }
+
+  .nav-button {
+    font-size: 2rem;
+  }
+
+  .thumbnails img {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-overlay {
+    font-size: 1.5rem;
+  }
+
+  .nav-button {
+    font-size: 1.5rem;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 40px;
+  }
+}

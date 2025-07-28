@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Image Gallery- Week06 Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="gallery-container">
+      <div class="main-image-wrapper">
+        <h1 class="title-overlay">Wimbledon 2025 Champions</h1>
+        <button
+          id="prevButton"
+          class="nav-button left"
+          aria-label="Previous image"
+        >
+          &#8592;
+        </button>
+        <img id="mainImage" class="fullscreen-img" src="" alt="" />
+        <button
+          id="nextButton"
+          class="nav-button right"
+          aria-label="Next image"
+        >
+          &#8594;
+        </button>
+        <div
+          class="thumbnails"
+          id="thumbnailContainer"
+          aria-label="Image thumbnails"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
